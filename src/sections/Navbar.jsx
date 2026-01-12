@@ -9,7 +9,15 @@ function Navbar() {
     <>
       <header className="fixed top-0 w-full h-20 flex items-center justify-between px-14 z-60 bg-transparent">
         {/* Logo */}
-        <Link to="/">
+        <Link
+          to="/"
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
           <img
             src="/logo-advanced.png"
             alt="Advanced Agency Logo"
