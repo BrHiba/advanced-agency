@@ -22,7 +22,10 @@ function FullscreenMenu({ open, setOpen }) {
     navigate("/contact");
     setOpen(false);
   };
-
+  const goToAbout = () => {
+    navigate("/about");
+    setOpen(false);
+  };
   return (
     <div
       className={`
@@ -44,7 +47,7 @@ function FullscreenMenu({ open, setOpen }) {
         >
           <ul className="space-y-10 text-4xl md:text-5xl font-light">
 
-            <li onClick={() => goToSection("about")} className="cursor-pointer hover:opacity-60 transition">
+            <li onClick={goToAbout} className="cursor-pointer hover:opacity-60 transition">
               About
             </li>
 

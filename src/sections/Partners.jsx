@@ -23,19 +23,20 @@ export default function PartnersHugeStyle() {
   return (
     <section className="relative bg-black py-40 px-12 overflow-hidden">
       {/* Big Title */}
-      <motion.h1
-        initial={{ opacity: 0, letterSpacing: "0.3em" }}
-        whileInView={{ opacity: 1, letterSpacing: "-0.02em" }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-className="
-  text-6xl md:text-[8rem] font-heading leading-[1.05]
-  bg-linear-to-b from-white to-white/70
-  bg-clip-text text-transparent max-w-xl md:ml-10
+ <motion.h1
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="
+    text-6xl md:text-[8rem] font-heading leading-[1.05]
+    bg-linear-to-b from-white to-white/70
+    bg-clip-text text-transparent max-w-xl md:ml-10
+  "
+>
+  Our Partners
+</motion.h1>
 
-"
-      >
-        Our Partners
-      </motion.h1>
+
 
       {/* Description */}
       <motion.p
