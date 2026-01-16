@@ -36,7 +36,7 @@ function ServicesHighlight() {
 
             {/* Content */}
             <div className="relative z-10 p-10">
-              <h3 className="text-white text-3xl md:text-4xl font-light leading-tight">
+              <h3 className="text-white text-3xl md:text-4xl font-editorial leading-tight">
                 {img.title}
               </h3>
             </div>

@@ -6,6 +6,10 @@
 }
 
 :root {
+  /* Fonts */
+  --font-body: 'Outfit', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
   /* Brand Colors */
   --color-primary: #C4EF17;
   --color-heading: #131217;
