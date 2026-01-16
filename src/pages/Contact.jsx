@@ -174,7 +174,7 @@ export default function Contact() {
             {tab === "follow" && (
               <div className="space-y-4">
                 <a
-                  href="https://ma.linkedin.com/company/advanced-agenc"
+                  href="https://www.linkedin.com/company/advanced-agency/"
                   target="_blank"
                   onMouseEnter={() => handleShowTooltip("VISIT")}
                   onMouseLeave={handleHideTooltip}
