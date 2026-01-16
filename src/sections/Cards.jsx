@@ -8,11 +8,11 @@ const images = [
     image: "",
   },
   {
-    title: "Agentic AI",
+    title: "E-commerce Development",
     image: "" ,
   },
   {
-    title: "E-commerce Development",
+    title: "Agentic AI",
     image: "" ,
   },
 ];
