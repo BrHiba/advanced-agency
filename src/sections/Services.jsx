@@ -86,7 +86,7 @@ function Services() {
                 className="
                   text-[5rem] md:text-[6rem]
                   leading-[0.95]
-                  font-semibold
+                  font-editorial
                   tracking-tight
                   
                 "

@@ -39,8 +39,6 @@ function About() {
         </div>
       </section>
 
-      {/* Extra sections (optional) */}
-      {/* مثلا Mission / Team / Timeline */}
     </main>
   );
 }

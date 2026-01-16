@@ -28,7 +28,7 @@ export default function PartnersHugeStyle() {
   animate={{ opacity: 1 }}
   transition={{ duration: 0.8, ease: "easeOut" }}
   className="
-    text-6xl md:text-[8rem] font-heading leading-[1.05]
+    text-6xl md:text-[8rem] font-editorial leading-[1.05]
     bg-linear-to-b from-white to-white/70
     bg-clip-text text-transparent max-w-xl md:ml-10
   "
