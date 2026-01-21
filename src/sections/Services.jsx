@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Web Development",
-    image: "/advanced-web.png",
-  },
-  {
     title: "Mobile Applications",
     image: "/advanced-mobile.png",
+  },
+  {
+    title: "Web Development",
+    image: "/advanced-web.png",
   },
   {
     title: "Agentic AI",
@@ -42,7 +42,7 @@ function Services() {
               }}
               variants={{
                 rest: { scale: 1 },
-                hover: { scale: 1 },
+                hover: { scale: 1.1 },
               }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             />
