@@ -22,7 +22,7 @@ const services = [
 
 function Services() {
   return (
-    <section className="w-full h-screen bg-black overflow-hidden">
+    <section id="services" className="w-full h-screen bg-black overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-4 w-full h-full">
         {services.map((service, index) => (
           <motion.div
