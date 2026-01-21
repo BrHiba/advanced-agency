@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+
 function Hero() {
   return (
     <section
@@ -36,8 +39,7 @@ function Hero() {
 
       {/* Scroll Down */}
       <div className="scroll-indicator relative z-10">
-        <span>Scroll</span>
-        <div className="down-arrow"></div>
+      <FontAwesomeIcon icon={faAngleDown} className="text-4xl text-[#C4EF17] down-arrow"/>
       </div>
     </section>
   );

@@ -66,18 +66,19 @@
 
 @keyframes arrowFloat {
   0% {
-    transform: rotate(-45deg) translateY(0);
+    transform: translateY(0);
     opacity: 0.4;
   }
   50% {
-    transform: rotate(-45deg) translateY(8px);
+    transform: translateY(8px);
     opacity: 1;
   }
   100% {
-    transform: rotate(-45deg) translateY(0);
+    transform: translateY(0);
     opacity: 0.4;
   }
 }
+
 
 @keyframes fadeUp {
   from {
@@ -117,12 +118,7 @@
 
 /* Arrow */
 .down-arrow {
-  width: 14px;
-  height: 14px;
-  border-left: 2px solid #C4EF17;
-  border-bottom: 2px solid #C4EF17;
-  transform: rotate(-45deg);
-  animation:  1.8s ease-in-out infinite;
+  animation: arrowFloat 1.8s ease-in-out infinite;
 }
 
 /* Inputs */
