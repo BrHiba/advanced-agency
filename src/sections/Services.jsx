@@ -11,11 +11,11 @@ const services = [
     image: "/advanced-web.png",
   },
   {
-    title: "Agentic AI",
+    title: "E-commerce Development",
     image: "",
   },
   {
-    title: "E-commerce Development",
+    title: "Agentic AI",
     image: "",
   },
 ];
