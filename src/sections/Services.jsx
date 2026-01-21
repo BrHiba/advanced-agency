@@ -51,8 +51,8 @@ function Services() {
             <motion.div
               className="absolute inset-0 bg-black"
               variants={{
-                rest: { opacity: 0.2 },
-                hover: { opacity: 0.2 },
+                rest: { opacity: 0 },
+                hover: { opacity: 0 },
               }}
               transition={{ duration: 0.5 }}
             />
