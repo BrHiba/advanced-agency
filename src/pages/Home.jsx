@@ -3,13 +3,13 @@ import Work from "../sections/Work";
 import Partners from "../sections/Partners";
 import Footer from "../sections/Footer";
 import Hero from "../sections/Hero";
-import Cards from "../sections/Cards";
+import ServicesCard from "../sections/ServicesCard";
 
 function Home() {
   return (
     <>
       <Hero />
-      <Cards/>
+      <ServicesCard/>
       <Services />
       <Work />
       <Partners />

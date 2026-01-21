@@ -6,7 +6,7 @@ function LogoImage() {
 
   return (
     <mesh>
-      <planeGeometry args={[3, 3]} />
+      <planeGeometry args={[4, 4]} />
       <meshStandardMaterial
         map={texture}
         transparent

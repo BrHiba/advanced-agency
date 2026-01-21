@@ -16,7 +16,7 @@ function Hero() {
         <h1
           className="
           text-white font-editorial
-          text-[clamp(2.8rem,6vw,5.5rem)]
+          text-[clamp(2.8rem,6vw,6rem)]
           leading-[1.05]
           tracking-tight
           drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)]
