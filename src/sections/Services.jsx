@@ -1,139 +1,86 @@
-import { useEffect, useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 
 const services = [
   {
     title: "Web Development",
-    desc: "High-performance websites built to be fast, secure, and visually impactful.",
-    image: "/web.png",
-    type: "icon",
+    image: "/advanced-web2.png",
   },
   {
-    title: "Mobile Applications ",
-    desc: "Smooth and intuitive mobile apps crafted for real-world user experiences.",
-    image: "/mobile.png",
-    type: "icon",
-  },
-  {
-    title: "E-commerce Development",
-    desc: "Scalable online stores designed to convert visitors into loyal customers.",
-    image: "/eco.png",
-    type: "icon",
+    title: "Mobile Applications",
+    image: "",
   },
   {
     title: "Agentic AI",
-    desc: "Smart AI agents that think, act, and automate to accelerate your business.",
-    image: "/ai.jpg",
-    type: "bg",
+    image: "",
+  },
+  {
+    title: "E-commerce Development",
+    image: "",
   },
 ];
 
-
 function Services() {
-  const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    const onScroll = () => {
-      const section = document.getElementById("services");
-      if (!section) return;
-
-      const rect = section.getBoundingClientRect();
-      const totalScroll = section.offsetHeight - window.innerHeight;
-      const progress = Math.min(Math.max(-rect.top / totalScroll, 0), 1);
-
-      const index = Math.floor(progress * services.length);
-      setActive(Math.min(index, services.length - 1));
-    };
-
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const isAI = services[active].type === "bg";
-
   return (
-    <section id="services" className="relative h-[400vh] font-(--font-body)">
-      {/* BACKGROUND */}
-      <div className="fixed inset-0 -z-10 transition-all duration-700">
-        {!isAI && <div className="absolute inset-0 bg-(--color-dark)" />}
-
-        {isAI && (
-          <>
-            <img
-              src={services[active].image}
-              className="absolute inset-0 w-full h-full object-cover scale-110"
+    <section className="w-full h-screen bg-black overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-4 w-full h-full">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            className="group relative w-full h-full overflow-hidden flex items-end justify-center"
+            initial="rest"
+            whileHover="hover"
+            animate="rest"
+          >
+            {/* Image */}
+            <motion.div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${service.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              variants={{
+                rest: { scale: 1 },
+                hover: { scale: 1 },
+              }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             />
-            <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/60 to-black/90" />
-          </>
-        )}
-      </div>
 
-      {/* STICKY CONTENT */}
-      <div className="sticky top-0 h-screen flex items-start relative z-10 pt-32">
-        <div className="w-full text-white px-9 md:px-18">
-          {/* COUNTER */}
-          <div className="mb-12 text-sm tracking-widest text-(--color-default)">
-            0{active + 1} / 04
-          </div>
+            {/* Overlay */}
+            <motion.div
+              className="absolute inset-0 bg-black"
+              variants={{
+                rest: { opacity: 0.2 },
+                hover: { opacity: 0.2 },
+              }}
+              transition={{ duration: 0.5 }}
+            />
 
-          {/* GRID */}
-          <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-40 max-w-350">
-            {/* LEFT – TEXT */}
-            <div
-              key={active}
-              className="animate-fadeUp flex flex-col md:gap-45 items-start text-left"
-            >
-              <h2
-                className="
-                  text-[5rem] md:text-[6rem]
-                  leading-[0.95]
-                  font-semibold
-                  tracking-tight
-                  
-                "
-                style={{ fontFamily: "var(--font-heading)" }}
+            {/* Content */}
+            <div className="relative z-10 mb-16 flex flex-col items-center text-center">
+              <motion.h3
+                className="text-white text-3xl md:text-4xl font-editorial tracking-wide"
+                variants={{
+                  rest: { y: 0, opacity: 1 },
+                  hover: { y: -10, opacity: 1 },
+                }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
               >
-                {services[active].title}
-              </h2>
+                {service.title}
+              </motion.h3>
 
-              <p
-                className="
-                  text-sm md:text-base
-                  leading-loose
-                  opacity-80
-                  max-w-sm
-                "
-              >
-                
-
-                {services[active].desc}
-              </p>
+              <motion.span
+                className="mt-4 h-0.5 bg-white"
+                variants={{
+                  rest: { width: 40, opacity: 0.5 },
+                  hover: { width: 90, opacity: 1 },
+                }}
+                transition={{ duration: 0.4 }}
+              />
             </div>
-
-            {/* RIGHT – IMAGE */}
-            {!isAI && (
-              <div className="relative flex justify-end items-center pr-16">
-                <div
-                  className="
-                    absolute w-130 h-130 rounded-full
-                    bg-(--color-primary)/20 blur-[120px]
-                  "
-                />
-                <img
-                  src={services[active].image}
-                  alt=""
-                  className="
-                    relative
-                    w-105 h-105
-                    md:w-115 md:h-115
-                    object-contain
-                    drop-shadow-[0_0_120px_rgba(196,239,23,0.55)]
-                    animate-float
-                  "
-                />
-              </div>
-            )}
-          </div>
-        </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
