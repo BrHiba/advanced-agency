@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 const services = [
   {
     title: "Web Development",
-    image: "/advanced-web2.png",
+    image: "/advanced-web.png",
   },
   {
     title: "Mobile Applications",
-    image: "",
+    image: "/advanced-mobile.png",
   },
   {
     title: "Agentic AI",
