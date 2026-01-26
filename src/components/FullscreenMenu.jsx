@@ -23,9 +23,15 @@ function FullscreenMenu({ open, setOpen }) {
     setOpen(false);
   };
   const goToAbout = () => {
-    navigate("/about");
-    setOpen(false);
-  };
+  navigate("/about");
+
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, 100);
+
+  setOpen(false);
+};
+
   return (
     <div
       className={`
