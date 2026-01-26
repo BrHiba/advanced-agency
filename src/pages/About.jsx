@@ -26,7 +26,6 @@ export default function About() {
           viewport={{ once: true }}
           className="relative z-10 px-8 md:px-24 py-28 flex flex-col justify-center"
         >
-
           <h1 className="text-xs uppercase tracking-[0.4em] text-(--color-default) mb-4">
             Who we are{" "}
           </h1>
@@ -81,23 +80,29 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* RIGHT COLUMN — FULL BACKGROUND IMAGE */}
+        {/* RIGHT COLUMN — FULL BACKGROUND VIDEO */}
         <motion.div
           initial={{ scale: 1.12 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 2.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative hidden md:block bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://advancedagency.fr/wp-content/uploads/2025/02/44b503153063467.6329428a5efb7.webp')",
-          }}
+          className="relative hidden md:block overflow-hidden"
         >
+          {/* Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/videos/contact-bg.mp4" type="video/mp4" />
+          </video>
+
           {/* Cinematic overlay */}
           <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/30 to-black/10"></div>
 
           {/* Neon edge glow */}
-          <div className="absolute inset-y-0 left-0 w-px bg-(--color-primary)/60 shadow-[0_0_20px_var(--color-primary)]"></div>
 
           {/* Grain */}
           <div className="absolute inset-0 opacity-[0.12] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none"></div>
