@@ -12,22 +12,36 @@ const services = [
   },
   {
     title: "E-commerce Development",
-    image: "",
+    image: "/advanced-ecommerce.png",
   },
   {
     title: "Agentic AI",
-    image: "",
+    image: "/advanced-ai.png",
   },
 ];
 
 function Services() {
   return (
-    <section id="services" className="w-full h-screen bg-black overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-4 w-full h-full">
+    <section
+      id="services"
+      className="w-full min-h-screen bg-black overflow-hidden"
+    >
+      <div
+        className="
+          grid grid-cols-1
+          sm:grid-cols-2
+          md:grid-cols-2
+          lg:grid-cols-4
+          w-full min-h-screen
+        "
+      >
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="group relative w-full h-full overflow-hidden flex items-end justify-center"
+            className="
+              group relative w-full min-h-[60vh] lg:min-h-screen
+              overflow-hidden flex items-end justify-center
+            "
             initial="rest"
             whileHover="hover"
             animate="rest"
@@ -47,20 +61,23 @@ function Services() {
               transition={{ duration: 0.6, ease: "easeOut" }}
             />
 
-            {/* Overlay */}
+            {/* Overlay (mobile visible / desktop hover) */}
             <motion.div
-              className="absolute inset-0 bg-black"
+              className="absolute inset-0 bg-black/50 lg:bg-black"
               variants={{
-                rest: { opacity: 0 },
-                hover: { opacity: 0 },
+                rest: { opacity: 0.4 },
+                hover: { opacity: 0.2 },
               }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.4 }}
             />
 
             {/* Content */}
-            <div className="relative z-10 mb-16 flex flex-col items-center text-center">
+            <div className="relative z-10 mb-12 lg:mb-16 flex flex-col items-center text-center px-6">
               <motion.h3
-                className="text-white text-3xl md:text-4xl font-editorial tracking-wide"
+                className="
+                  text-white font-editorial tracking-wide
+                  text-2xl sm:text-3xl md:text-3xl lg:text-4xl
+                "
                 variants={{
                   rest: { y: 0, opacity: 1 },
                   hover: { y: -10, opacity: 1 },
@@ -73,7 +90,7 @@ function Services() {
               <motion.span
                 className="mt-4 h-0.5 bg-white"
                 variants={{
-                  rest: { width: 40, opacity: 0.5 },
+                  rest: { width: 40, opacity: 0.6 },
                   hover: { width: 90, opacity: 1 },
                 }}
                 transition={{ duration: 0.4 }}

@@ -7,7 +7,9 @@ function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 w-full h-20 flex items-center justify-between px-14 z-60 bg-transparent">
+      <header className="fixed top-0 w-full h-20 flex items-center justify-between
+          px-6 md:px-14 z-60
+          transition-all duration-500 ease-out">
         {/* Logo */}
         <Link
           to="/"

@@ -7,7 +7,7 @@ import Hero from "../sections/Hero";
 function Home() {
   return (
     <>
-      <Hero />
+    <Hero />
       <Services />
       <Work />
       <Partners />
